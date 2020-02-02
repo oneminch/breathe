@@ -22,10 +22,10 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@keyframes/core": "^2.0.2"
+    "@keyframes/core": "^2.0.9"
   }
 }
