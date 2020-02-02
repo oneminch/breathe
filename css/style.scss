@@ -1,0 +1,385 @@
+// Import regular font
+@font-face {
+	font-family: "Metropolis-Regular";
+	src: url("fonts/Metropolis-Regular.eot");
+	src: url("fonts/Metropolis-Regular.eot?#iefix") format("embedded-opentype"),
+		url("fonts/Metropolis-Regular.woff2") format("woff2"),
+		url("fonts/Metropolis-Regular.woff") format("woff"),
+		url("fonts/Metropolis-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Import bold font
+@font-face {
+	font-family: "Metropolis-Bold";
+	src: url("fonts/Metropolis-Bold.eot");
+	src: url("fonts/Metropolis-Bold.eot?#iefix") format("embedded-opentype"),
+		url("fonts/Metropolis-Bold.woff2") format("woff2"),
+		url("fonts/Metropolis-Bold.woff") format("woff"),
+		url("fonts/Metropolis-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: "Metropolis-Regular", sans-serif;
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	transition: all 0.3s;
+	// border: .1px solid red;
+}
+
+html {
+	font-size: 100%;
+	background-color: rgba(250, 177, 160, 0.25);
+}
+
+body {
+	margin: 0;
+	padding: 0 3rem 5rem 3rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Metropolis-Bold", sans-serif;
+}
+
+.intro {
+	width: 100%;
+	margin: 2rem 0 4rem 0;
+	text-align: center;
+
+	img {
+		margin: 0;
+		width: 100px;
+		height: 100px;
+	}
+
+	&__header {
+		margin: 0;
+	}
+
+	&__description {}
+}
+
+.techniques {
+	width: 768px;
+	margin: 1rem auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 2rem;
+
+	&__technique {
+		color: #fff;
+		font-size: 1.25rem;
+		height: 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10px;
+		cursor: pointer;
+
+		&:nth-child(1) {
+			background-color: #f97f51;
+		}
+
+		&:nth-child(2) {
+			background-color: #9c88ff;
+		}
+
+		&:nth-child(3) {
+			background-color: #55efc4;
+		}
+
+		&:nth-child(4) {
+			background-color: #fdcb6e;
+		}
+
+		&:nth-child(5) {
+			background-color: #badc58;
+		}
+
+		&:nth-child(6) {
+			background-color: #95afc0;
+		}
+
+		>* {
+			margin: 0;
+		}
+
+		p {
+			margin-top: 0.5rem;
+			font-family: "Metropolis-Bold", sans-serif;
+		}
+
+		span {
+			font-size: 0.65rem;
+			transition: all 0.3s ease-out;
+			visibility: hidden;
+			opacity: 0;
+			position: relative;
+			top: 20px;
+		}
+
+		&:hover {
+			span {
+				visibility: visible;
+				opacity: 1;
+				transform: translateY(-10px);
+			}
+		}
+	}
+}
+
+.breathe {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.95);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #000;
+	transition: visibility 0.3s, opacity 0.1s linear;
+	visibility: hidden;
+	opacity: 0;
+
+	>* {
+		margin: 1.5rem 0;
+	}
+
+	.navigation {
+		width: 85%;
+		max-width: 768px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		top: 4rem;
+
+		&__icons {
+			margin: 0;
+			width: 30px;
+			height: 30px;
+			display: block;
+			background-color: #fff;
+			border-radius: 50%;
+			cursor: pointer;
+			z-index: 2;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+		}
+
+		.back {
+			display: none;
+		}
+	}
+
+	// Technique Description Mode
+	.technique {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		display: none;
+		text-align: center;
+
+		>* {
+			margin: 1rem 0;
+		}
+
+		// Technique image (random)
+		&__image {
+			width: 150px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		// Technique details text
+		&__description {
+			max-width: 768px;
+			width: 75%;
+
+			span {
+				font-size: .85rem;
+				font-family: "Metropolis-Bold", sans-serif;
+			}
+		}
+
+		// Go to technique practice button
+		&__continue {
+			background-color: #a29bfe;
+			color: #fff;
+			width: 100px;
+			height: 45px;
+			font-family: "Metropolis-Bold", sans-serif;
+			line-height: 45px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	}
+
+	// Technique Practice Mode
+	.practice {
+		width: 350px;
+		height: 350px;
+		margin: 0;
+		background: transparent;
+		position: absolute;
+		top: calc(50% - 200px);
+		left: calc(50% - 175px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		display: none;
+		z-index: 1;
+
+		>* {
+			margin: 1rem 0;
+		}
+
+		// Circle visual timer showing breathing
+		&__visual {
+			width: 225px;
+			height: 225px;
+			border-radius: 50%;
+			background-color: #ecf0f1;
+
+			span {
+				width: 90%;
+				height: 90%;
+				border-radius: 50%;
+				text-align: center;
+				display: block;
+				position: relative;
+				top: 5%;
+				left: 5%;
+				transform: scale(0.63);
+				background-color: #f1c40f;
+			}
+		}
+
+		// Current task (e.g. breathe in...)
+		&__task {
+			text-align: center;
+			color: #000;
+		}
+	}
+}
+
+// Enter Technique Practice Mode
+.practice-mode {
+	visibility: visible;
+	opacity: 1;
+
+	.navigation {
+		justify-content: space-between;
+
+		.back {
+			display: block;
+		}
+	}
+
+	.practice {
+		display: flex;
+	}
+
+	// Hide technique details
+	.technique {
+		display: none;
+	}
+}
+
+// Enter Technique Description Mode
+.description-mode {
+	visibility: visible;
+	opacity: 1;
+
+	.technique {
+		display: flex;
+	}
+
+	.navigation {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		.back {
+			display: none;
+		}
+	}
+
+	// Hide practice visuals
+	.practice {
+		display: none;
+	}
+}
+
+// Screen size: < 900px
+@media only screen and (max-width: 900px) {
+	body {
+		.techniques {
+			width: 640px;
+		}
+	}
+}
+
+// Screen size: < 768px
+@media only screen and (max-width: 768px) {
+	body {
+		padding: 0 1.5rem 5rem 1.5rem;
+
+		.techniques {
+			width: 95%;
+		}
+	}
+}
+
+// Screen size: < 640px
+@media only screen and (max-width: 640px) {
+	body {
+		.intro {
+			img {
+				width: 75px;
+				height: 75px;
+			}
+		}
+
+		.techniques {
+			width: 95%;
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: auto;
+			grid-gap: 1rem;
+		}
+
+		.breathe {
+			.technique {
+				&__image {
+					width: 100px;
+				}
+			}
+
+			// Navigate pop-up (Go back)
+			.navigation {
+				top: 2rem;
+			}
+		}
+	}
+}
