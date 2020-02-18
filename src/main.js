@@ -23,7 +23,7 @@ const list = [
 	{
 		id: 2,
 		name: "4-7-8 Breathing",
-		desc: `This technique is a from of deep breathing that helps relieve stress and fall asleep faster. Breathe in for 4 seconds, hold breath for 7 seconds and, then exhale for 8 seconds.`,
+		desc: `This technique is a form of deep breathing that helps relieve stress and fall asleep faster. Breathe in for 4 seconds, hold breath for 7 seconds and, then exhale for 8 seconds.`,
 		secs: [4, 7, 8, 0]
 	},
 	{
