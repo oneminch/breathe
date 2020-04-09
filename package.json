@@ -26,6 +26,6 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@keyframes/core": "^2.0.9"
+    "@keyframes/core": "^2.0.10"
   }
 }
