@@ -17,7 +17,7 @@ const list = [
 	{
 		id: 1,
 		name: "Box Breathing",
-		desc: `This technique (a.k.a Square Breathing) is a calming breathing technique used by people in stressful situations like athletes. Breathe in for 4 seconds, followed by holding in breath for 4 seconds, then exhale for 4 seconds, followed by holding out breath for 4 seconds.`,
+		desc: `This technique (a.k.a Square Breathing) is a calming breathing technique used by people like athletes in stressful situations. Breathe in for 4 seconds, followed by holding in breath for 4 seconds, then exhale for 4 seconds, followed by holding out breath for 4 seconds.`,
 		secs: [4, 4, 4, 4]
 	},
 	{
