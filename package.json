@@ -1,31 +1,32 @@
 {
-  "name": "breathe",
-  "version": "1.0.0",
-  "description": "Guided breathing techniques\r Practice common breathing techniques using guided visualizations\r - 4-7-8 Method\r - Box breathing",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack --config webpack.config.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oneminch/breathe.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/oneminch/breathe/issues"
-  },
-  "homepage": "https://github.com/oneminch/breathe#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
-  },
-  "dependencies": {
-    "@keyframes/core": "^2.0.9"
-  }
+	"name": "breathe",
+	"version": "1.0.0",
+	"description": "Guided breathing techniques\r Practice common breathing techniques using guided visualizations\r - 4-7-8 Method\r - Box breathing",
+	"main": "index.js",
+	"scripts": {
+		"start": "webpack --config webpack.config.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/oneminch/breathe.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/oneminch/breathe/issues"
+	},
+	"homepage": "https://github.com/oneminch/breathe#readme",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.3",
+		"babel-loader": "^7.1.5",
+		"babel-preset-env": "^1.7.0",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10"
+	},
+	"dependencies": {
+		"@keyframes/core": "^2.0.9",
+		"configstore": "^5.0.1"
+	}
 }
