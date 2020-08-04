@@ -3,3 +3,4 @@
 /css/.sass-cache/
 /css/style.css.map
 /*.sh
+/package-lock.json
