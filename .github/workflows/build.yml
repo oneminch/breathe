@@ -19,8 +19,10 @@ jobs:
            with:
               node-version: ${{ matrix.node-version }}
 
-         - name: Clear cache
+         - name: Clear cache 1
            run: npm cache clean --force
+
+         - name: Clear cache 2
            run: npm cache verify
 
          - name: Install Packages
