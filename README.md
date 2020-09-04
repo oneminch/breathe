@@ -36,6 +36,6 @@ Technology used: HTML, CSS(SCSS), Vanilla JavaScript (Bundled with Webpack/Babel
 - The file structure is as described above.
 - The main CSS file for this project (`style.css`) is compiled from the `style.scss` file located in the same directory. 
     - To code some CSS, please modify the .scss file,
-    - To compile .scss file to .css, open Git Bash in assets/css/ and run `sass --watch style.scss:style.css` (Make sure to end the process once done; This command constantly watches each modification saved).
+    - To compile .scss file to .css, open Git Bash and run `npx sass style.scss style.css`.
 - If JavaScript files in src/ are modified, or if you are done making changes, all you need to do is push and the GitHub actions file I set up will automatically build it. 
 - Then submit a pull request
